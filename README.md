@@ -48,23 +48,19 @@ def bar(a: int):
 Calling a function on the return value of another, thus "composing" functions. 
 
 ```python
-def momma():
+def first():
     return "Momma, "
 
 
-def just_killed_a_man(val: str):
+def second(val: str):
     return f"{val}just killed a man, "
 
 
-def put_a_gun_against_his_head(val: str):
+def third(val: str):
     return f"{val}put a gun against his head"
 
 
-first_line = put_a_gun_against_his_head(
-    just_killed_a_man(
-        momma()
-    )
-)
+first_line = third(second(first()))
 
 # Guess what this prints
 print(first_line)
