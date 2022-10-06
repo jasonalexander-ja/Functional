@@ -3,8 +3,6 @@
 A guide to corretly writing functional programming. 
 
 
-<br />
-
 ## Pure Functions
 ---
 Function always returns the same result when the same parameters are passed.
@@ -20,10 +18,8 @@ def foo(a: int):
 # Return value depends on scary_global_state
 def bar(a: int):
     return a * scary_global_state
-
 ```
 
-<br />
 
 ## Disciplined State
 ---
@@ -42,17 +38,14 @@ def foo(a: int):
 def bar(a: int):
     return a * scary_global_state
 # which depends on how many times `foo` is called
-
 ```
 
-<br />
 
 ## Functional Composition
 ---
 Calling a function on the return value of another, thus "composing" functions. 
 
 ```python
-
 def momma():
     return "Momma, "
 
@@ -73,10 +66,8 @@ first_line = put_a_gun_against_his_head(
 
 # Guess what this prints
 print(first_line)
-
 ```
 
-<br />
 
 ## Immutability
 ---
@@ -95,10 +86,8 @@ for item in list:
 
 # This is way quicker
 even_numbers = [num for num in original_list if num % 2 == 0]
-
 ```
 
-<br />
 
 ## Side effects (avoid/reduce)
 ---
@@ -107,7 +96,24 @@ something about the environment like a file. Obviously this will be needed
 eventually but it should be reduced to a few designated and well handled 
 functions/modules. 
 
-<br />
+```python
+# This always returns a tuple of (Boolean, string) no matter what 
+def encapsulated_file_read():
+    try:
+        f = open("demofile.txt", "r")
+        return (True, f.read())
+    except:
+        (False, "")
+
+(sucess, file_data) = encapsulated_file_read()
+
+if success:
+    print(file_data)
+else:
+    print("Couldn't open file. ")
+
+```
+
 
 ## Higher Order Functions
 ---
@@ -125,6 +131,5 @@ result = multiplier(5)(2)
 
 # Prints 10
 print(result)
-
 ```
 
