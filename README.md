@@ -4,7 +4,7 @@ A guide to corretly writing functional programming.
 
 
 ## Pure Functions
----
+
 Function always returns the same result when the same parameters are passed.
 
 ```python
@@ -20,9 +20,9 @@ def bar(a: int):
     return a * scary_global_state
 ```
 
-
+<br />
 ## Disciplined State
----
+
 No sharing of a mutatable state.
 
 ```python
@@ -40,9 +40,9 @@ def bar(a: int):
 # which depends on how many times `foo` is called
 ```
 
-
+<br />
 ## Functional Composition
----
+
 Calling a function on the return value of another, thus "composing" functions. 
 
 ```python
@@ -68,9 +68,9 @@ first_line = put_a_gun_against_his_head(
 print(first_line)
 ```
 
-
+<br />
 ## Immutability
----
+
 Avoid mutating values, FP languages have amazing features for handling
 collections (mapping, sorting, filtering ext.) so it's rarely needed.  
 
@@ -88,9 +88,9 @@ for item in list:
 even_numbers = [num for num in original_list if num % 2 == 0]
 ```
 
-
+<br />
 ## Side effects (avoid/reduce)
----
+
 When a function has an effect on the overall state, I.E. changing 
 something about the environment like a file. Obviously this will be needed
 eventually but it should be reduced to a few designated and well handled 
@@ -114,9 +114,9 @@ else:
 
 ```
 
-
+<br />
 ## Higher Order Functions
----
+
 Functions that can take or return other functions as parameters/return types,
 an example of this is currying. 
 
