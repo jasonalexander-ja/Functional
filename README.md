@@ -21,6 +21,7 @@ def bar(a: int):
 ```
 
 <br />
+
 ## Disciplined State
 
 No sharing of a mutatable state.
@@ -41,6 +42,7 @@ def bar(a: int):
 ```
 
 <br />
+
 ## Functional Composition
 
 Calling a function on the return value of another, thus "composing" functions. 
@@ -69,6 +71,7 @@ print(first_line)
 ```
 
 <br />
+
 ## Immutability
 
 Avoid mutating values, FP languages have amazing features for handling
@@ -89,6 +92,7 @@ even_numbers = [num for num in original_list if num % 2 == 0]
 ```
 
 <br />
+
 ## Side effects (avoid/reduce)
 
 When a function has an effect on the overall state, I.E. changing 
@@ -115,6 +119,7 @@ else:
 ```
 
 <br />
+
 ## Higher Order Functions
 
 Functions that can take or return other functions as parameters/return types,
